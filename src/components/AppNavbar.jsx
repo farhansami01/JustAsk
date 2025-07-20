@@ -5,7 +5,7 @@ import React from 'react';
 import jtitle from '../assets/jtitle.png';
 
 function AppNavbar() {
-  const cartItems = useSelector((state) => state.items || []);
+  const cartItems = useSelector((state) => state.cart.items || []);
   const itemCount = cartItems.length;
   return (
     <Navbar bg="dark" variant="dark" expand="lg" sticky="top">
