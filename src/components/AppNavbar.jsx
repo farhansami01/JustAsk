@@ -8,7 +8,7 @@ function AppNavbar() {
   const cartItems = useSelector((state) => state.cart.items || []);
   const itemCount = cartItems.length;
   return (
-    <Navbar bg="dark" variant="dark" expand="lg" sticky="top">
+    <Navbar bg="dark" variant="dark" expand="lg" sticky="top" className="shadow-sm px-3">
       <Container>
         {/* Brand */}
         <Navbar.Brand as={Link} to="/" style={{ fontWeight: 'bold', fontSize: '1rem' }}><img src={jtitle} alt="JustAsk" style={{ maxHeight: '70px' }} /></Navbar.Brand>
@@ -21,8 +21,8 @@ function AppNavbar() {
           <Nav className="me-auto">
             <Nav.Link as={Link} to="/">Home</Nav.Link>
             <Nav.Link as={Link} to="/cart">
-              Cart
-              <Badge bg="secondary">{itemCount}</Badge>
+              🛒Cart
+              <Badge bg="danger">{itemCount}</Badge>
             </Nav.Link>
             <Nav.Link as={Link} to="/about">About</Nav.Link>
             <Nav.Link as={Link} to="/fashion">Fashion</Nav.Link>
@@ -32,11 +32,8 @@ function AppNavbar() {
 
           {/*Right side (Cart + Future Login/Profile) */}
           <Nav>
-            <Nav.Link as={Link} to="/cart">
-              Cart{' '}
-              <Badge bg="danger" pill>
-                {itemCount}
-              </Badge>
+            <Nav.Link as={Link} to="/login">
+              🙂Login
             </Nav.Link>
           </Nav>
         </Navbar.Collapse>
