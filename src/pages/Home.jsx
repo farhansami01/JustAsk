@@ -1,9 +1,11 @@
 import { Container, Row, Col, Carousel, Card, Button } from 'react-bootstrap';
 import ProductCard from '../components/ProductCard.jsx';
+import React from 'react';
+import phone from '../assets/phone.png';
 
 function Home() {
   const products = [
-    { id: 1, name: 'yphone', price: 90, image: 'https://via.placeholder.com/150' },
+    { id: 1, name: 'yphone', price: 90, image: phone },
     { id: 2, name: 'Asidas Shoes', price: 100, image: 'https://via.placeholder.com/150' },
     { id: 3, name: 'yphone Headphones', price: 30, image: 'https://via.placeholder.com/150' },
     { id: 4, name: 'Grocery Pack', price: 27, image: 'https://via.placeholder.com/150' },
